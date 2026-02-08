@@ -50,6 +50,10 @@ invalidate:- when manager assigned the task
 - use reddis for faster execuation
 
 
+# Postman collection
+
+https://recharg.postman.co/workspace/recharg-Workspace~b9e302cd-8868-4024-8323-2c34b6267bbc/request/32049335-f61c2708-ab5f-48ad-87f3-9d688949a21a?sideView=agentMode
+
 
 
 
