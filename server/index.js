@@ -12,11 +12,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8082;
 const db_url = process.env.DB_URL;
+const CORS = process.env.CORS;
+
 
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [CORS],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -28,15 +30,10 @@ app.use("/api/task", taskRoutes);
 app.use("/api/user", userRoutes);
 
 
-// mongoose.connect(db_url)
-//   .then(() => console.log("DB connected"))
-//   .catch(err => console.log(err));
 
 
 
-
-
-mongoose.connect("mongodb://localhost:27017/to-do").then(()=>{
+mongoose.connect(db_url).then(()=>{
     console.log("db is connected")
 }).catch((err)=>{
     console.log(err)
