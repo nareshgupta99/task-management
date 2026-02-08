@@ -3,6 +3,16 @@ Node v24.13.0
 mongo db
 Redis
 
+# How to run 
+Download the reddish https://github.com/tporadowski/redis/releases
+then set a path, C:\Program Files\Redis
+open the project and go into server folder 
+change the
+and type: npm start
+
+frontend:- open the frontend folder and
+1. npm install
+2. type npm run dev
 
 
 # Architecture 
